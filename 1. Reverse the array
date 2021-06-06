@@ -1,1 +1,23 @@
+# l = [1,2,3,4,5]
+# left = 0
+# right = len(l)-1
+
+#print(l[::-1])
+
+def reverse_rec(l, left, right):
+    # Base Case
+    if l[left] >= l[right]: 
+        return
+    
+    # Self Work
+    l[left], l[right] = l[right], l[left]
+    # Recursive Action
+    reverse_rec(l,left+1,right-1)
+    return l
+
+l = [1,2,3,4,5]
+left = 0
+right = len(l)-1
+result = reverse_rec(l,left,right)
+print(result)
 
