@@ -1,1 +1,27 @@
+# def compare_fun(arr):
+#     a = min(arr)
+#     b = max(arr)
 
+#     return a, b
+
+# arr = [1,2,3,4,5,6,7,8]
+# result = compare_fun(arr)
+# print(result)
+    
+
+def compare_func(arr):
+    a = b = arr[0]
+
+    for i in range(1,len(arr)):
+        if arr[i] < a:
+            a = arr[i]
+        elif arr[i] > b:
+            b = arr[i]
+    
+    return a,b
+
+
+arr = [1,2,4,3,0,9,8]
+result = compare_func(arr)
+print(result)
+     
